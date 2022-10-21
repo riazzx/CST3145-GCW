@@ -46,10 +46,11 @@
             methods: {
                 addToCart: function () {
                     this.cart.push(this.lesson.subject);
-                    if (this.lesson.spaces != 0)
+                    if (this.lesson.spaces != 1)
                         this.lesson.spaces--;
                     else
                         document.getElementById("cart-btn").disabled = true
+                        this.lesson.spaces = 0;
 
 
                 }
