@@ -24,7 +24,8 @@
     float: right;
     padding: 3%;
     font-size: 20px;
-    background-color: #7393B3;
+    background-color: #3786d6;
+    color: #fff;
     border: 0;
     border-radius: 3%;
     width: 100%;
@@ -32,7 +33,7 @@
     transition-duration: 0.4s;
 }
 
-#cart-btn:hover{
-    background-color:#3786d6;
+#cart-btn:disabled{
+    background-color:#808080;
     color: white;
 }
