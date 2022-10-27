@@ -11,7 +11,7 @@
 
 #subject-div {
     border: solid black 7px  ;
-    border-radius: 15%;
+    border-radius: 25px;
     width: 25%;
     text-align: left;
     padding: 3%;
@@ -27,7 +27,7 @@
     background-color: #3786d6;
     color: #fff;
     border: 0;
-    border-radius: 3%;
+    border-radius: 15px;
     width: 100%;
     font-weight: bold;
     transition-duration: 0.4s;
