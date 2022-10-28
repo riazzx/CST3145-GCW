@@ -10,5 +10,5 @@
 - https://github.com/riazzx/CST3145-GCW 
 
 # Demo Link
-- https://riazzx.github.io/CST3145-GCW/group-work-cw
+- https://riazzx.github.io/CST3145-GCW
 
