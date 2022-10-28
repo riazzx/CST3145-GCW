@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Planner</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.10/dist/vue.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div id="app">
+        <header>
+            <h1 class="heading" v-text="sitename"></h1>
+        </header>
+        <main>
+            <div id="subject-div">
+                <h2 >Subject -  {{lesson.subject}}</h2>
+                <p>Location: {{lesson.location}}</p>
+                <p>Price: {{ lesson.price }}</p>
+                <p>Spaces: {{lesson.spaces}}</p>
+                <div id="cart-div">
+                    <button id="cart-btn" v-on:click="addToCart" :disabled="!canAddToCart">ADD TO CART</button>
+                </div>
+            </div>
+           
+        </main>
+       
+    </div>
+
+    <script>
+        var webstore = new Vue ({
+            el: '#app',
+            data: {
+                sitename: "School Planner",
+                lesson: {
+                    subject: "Math",
+                    location: "London",
+                     price: 100,
+                    spaces: 5
+                },
+                cart: []
+            },
+            methods: {
+                addToCart: function () {
+                    this.cart.push(this.lesson.subject);
+                    this.lesson.spaces--;
+                }
+            },
+            computed: {
+                canAddToCart: function () {
+                    return this.lesson.spaces > 0;
+                }
+            }
+        })
+    </script>
+    
+</body>
+</html>
